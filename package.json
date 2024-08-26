@@ -1,0 +1,13 @@
+{
+    "name": "yuanxinui",
+    "description": "YuanxinUi components.",
+    "author": "yuanchin <cs861229503@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+      "build": "vite build",
+      "dev": "vite build --watch"
+    },
+    "devDependencies": {
+      "vite": "^5.2.7"
+    }
+  }

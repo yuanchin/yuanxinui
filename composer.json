@@ -1,0 +1,48 @@
+{
+    "name": "yuanchin/yuanxinui",
+    "description": "YuanxinUi is a powerful suite of Blade components.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yuanchin\\YuanxinUi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yuanchin",
+            "email": "cs861229503@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "YuanxinUi": "Yuanchin\\YuanxinUi\\YuanxinUi"
+            },
+            "providers": [
+                "Yuanchin\\YuanxinUi\\YuanxinUiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "laravel/framework": "^10.0|^11.0",
+        "livewire/livewire": "^3.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "orchestra/testbench-dusk": "^8.0|^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

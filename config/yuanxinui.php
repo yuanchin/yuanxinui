@@ -22,6 +22,7 @@ return [
     | List of all YuanxinUi components.
     */
     'components' => [
+        'icon' => \Yuanchin\YuanxinUi\Components\Icon\Icon::class,
         'input' => \Yuanchin\YuanxinUi\Components\Form\Input::class,
     ]
 ];

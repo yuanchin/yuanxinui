@@ -87,6 +87,11 @@ class YuanxinUiServiceProvider extends ServiceProvider
             foreach ($components as $alias => $class) {
                 $blade->component($class, $alias, $prefix);
             }
+
+            $blade->anonymousComponentPath(
+                __DIR__ . '/Components/Icon/views',
+                'yuanxinui-icon'
+            );
         });
     }
 

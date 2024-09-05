@@ -3,7 +3,6 @@
 namespace Yuanchin\YuanxinUi;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
 
 class YuanxinUiServiceProvider extends ServiceProvider
@@ -27,7 +26,10 @@ class YuanxinUiServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerAliases();
+
         $this->registerYuanxinUi();
+
+        $this->registerServices();
     }
 
     /**
@@ -44,6 +46,8 @@ class YuanxinUiServiceProvider extends ServiceProvider
         $this->bootViews();
 
         $this->bootComponents();
+
+        $this->bootServices();
 
         // publishes
         $this->publishes([$this->path['config'] => config_path('yuanxinui.php')], 'yuanxinui.config');
@@ -113,5 +117,41 @@ class YuanxinUiServiceProvider extends ServiceProvider
 
             $this->loadViewsFrom($path, "yuanxinui-{$name}");
         });
+    }
+
+    /**
+     * Get the namespaces of all service classes.
+     *
+     * @return array<string>
+     */
+    protected function getServices()
+    {
+        return [
+            Services\FrontendAssets\FrontendAssets::class
+        ];
+    }
+
+    /**
+     * Register all service classes.
+     *
+     * @return void
+     */
+    protected function registerServices()
+    {
+        foreach ($this->getServices() as $service) {
+            app($service)->register();
+        }
+    }
+
+    /**
+     * Boot all service classes.
+     *
+     * @return void
+     */
+    protected function bootServices()
+    {
+        foreach ($this->getServices() as $service) {
+            app($service)->boot();
+        }
     }
 }

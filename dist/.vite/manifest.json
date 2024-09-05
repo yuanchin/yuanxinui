@@ -1,12 +1,11 @@
 {
   "css/yuanxinui.css": {
-    "file": "yuanxinui-DP2rzg_V.js",
-    "name": "yuanxinui",
+    "file": "yuanxinui.css",
     "src": "css/yuanxinui.css",
     "isEntry": true
   },
   "js/yuanxinui.js": {
-    "file": "yuanxinui-l0sNRNKZ.js",
+    "file": "yuanxinui.js",
     "name": "yuanxinui",
     "src": "js/yuanxinui.js",
     "isEntry": true

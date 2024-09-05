@@ -34,6 +34,26 @@ expect()->extend('render', function (array $data = []): Expectation {
     return $this;
 });
 
+expect()->extend('toBeCompiled', function (
+    string $expected = '',
+    string $expression = '',
+    array $variables = [],
+) {
+    $compileString = app('blade.compiler')->compileString($expression);
+
+    ob_start();
+
+    extract($variables);
+
+    eval(' ?>' . $compileString . '<?php ');
+
+    $output = ob_get_clean();
+
+    expect($output)->toBe($expected);
+
+    return $this;
+});
+
 /*
 |--------------------------------------------------------------------------
 | Functions

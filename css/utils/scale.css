@@ -1,0 +1,27 @@
+.yx-scale-0 {
+    transform: scale(0);
+}
+
+.yx-scale-25 {
+    transform: scale(.25);
+}
+
+.yx-scale-50 {
+    transform: scale(.5);
+}
+
+.yx-scale-75 {
+    transform: scale(.75);
+}
+
+.yx-scale-100 {
+    transform: scale(1);
+}
+
+.yx-scale-125 {
+    transform: scale(1.25);
+}
+
+.yx-scale-150 {
+    transform: scale(1.5);
+}

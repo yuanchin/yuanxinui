@@ -1,3 +1,9 @@
+@import './utils/opacity.css';
+@import './utils/scale.css';
+@import './utils/transition.css';
+@import './components/basic/icon.css';
+@import './components/form/input.css';
+
 :root {
     --yx-component-size-large: 40px;
     --yx-component-size: 34px;
@@ -5,4 +11,26 @@
     --yx-font-size-large: 16px;
     --yx-font-size-base: 14px;
     --yx-font-size-small: 12px;
+    --yx-border-radius: 4px;
+    --yx-border-radius-sm: 2px;
+    --yx-border-radius-md: 6px;
+    --yx-border-radius-lg: 8px;
+    --yx-border-radius-xl: 12px;
+    --yx-border-radius-2xl: 16px;
+    --yx-border-radius-3xl: 24px;
+    --yx-border-radius-full: 9999px;
+}
+
+:root {
+    --yx-color-white: #ffffff;
+    --yx-color-black: #000000;
+}
+
+:root {
+    --yx-color-gray: #374151;
+    --yx-color-gray-light-1: #4B5563;
+    --yx-color-gray-light-3: #6B7280;
+    --yx-color-gray-light-5: #9CA3AF;
+    --yx-color-gray-light-7: #D1D5DB;
+    --yx-color-gray-light-9: #E5E7EB;
 }

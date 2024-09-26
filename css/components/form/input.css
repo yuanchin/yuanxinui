@@ -1,0 +1,159 @@
+.yx-input {
+    --yx-input-border-radius: var(--yx-border-radius-lg);
+    --yx-input-wrapper-border-radius: var(--yx-input-border-radius);
+    --yx-input-wrapper-box-shadow: 0 0 0 1px var(--yx-color-gray-light-7) inset;
+    --yx-input-wrapper-background-color: var(--yx-color-white);
+}
+
+.yx-input.is-disabled {
+    --yx-input-wrapper-background-color: var(--yx-color-gray-light-9);
+}
+
+.yx-input--default {
+    --yx-input-height: var(--yx-component-size);
+    --yx-input-font-size: var(--yx-font-size-base);
+    --yx-input-line-height: var(--yx-input-height);
+    --yx-input-inner-height: calc(var(--yx-input-height, 34px) - 2px);
+    --yx-input-inner-line-height: calc(var(--yx-input-line-height, 34px) - 2px);
+    --yx-input-icon-height: 16px;
+    --yx-input-icon-width: 16px;
+    --yx-input-wrapper-padding: 1px 11px;
+}
+
+.yx-input--large {
+    --yx-input-height: var(--yx-component-size-large);
+    --yx-input-font-size: var(--yx-font-size-large);
+    --yx-input-line-height: var(--yx-input-height);
+    --yx-input-inner-height: calc(var(--yx-input-height, 40px) - 2px);
+    --yx-input-inner-line-height: calc(var(--yx-input-line-height, 40px) - 2px);
+    --yx-input-icon-height: 20px;
+    --yx-input-icon-width: 20px;
+    --yx-input-wrapper-padding: 1px 15px;
+}
+
+.yx-input--small {
+    --yx-input-height: var(--yx-component-size-small);
+    --yx-input-font-size: var(--yx-font-size-small);
+    --yx-input-line-height: var(--yx-input-height);
+    --yx-input-inner-height: calc(var(--yx-input-height, 28px) - 2px);
+    --yx-input-inner-line-height: calc(var(--yx-input-line-height, 28px) - 2px);
+    --yx-input-icon-height: 14px;
+    --yx-input-icon-width: 14px;
+    --yx-input-wrapper-padding: 1px 7px;
+}
+
+.yx-input--prepend {
+    --yx-input-wrapper-border-radius: 0 var(--yx-input-border-radius) var(--yx-input-border-radius) 0;
+}
+
+.yx-input--append {
+    --yx-input-wrapper-border-radius: var(--yx-input-border-radius) 0 0 var(--yx-input-border-radius);
+}
+
+.yx-input--append.yx-input--prepend {
+    --yx-input-wrapper-border-radius: 0;
+}
+
+.yx-input__wrapper.is-hover {
+    --yx-input-wrapper-box-shadow: 0 0 0 1px var(--yx-color-gray-light-5) inset;
+}
+
+.yx-input__wrapper.is-focus {
+    --yx-input-wrapper-box-shadow: 0 0 0 1px var(--yx-color-gray) inset;
+}
+
+.yx-input {
+    display: inline-flex;
+    width: 100%;
+    height: var(--yx-input-height);
+    font-size: var(--yx-input-font-size);
+    line-height: var(--yx-input-line-height);
+    box-sizing: border-box;
+}
+
+.yx-input__wrapper {
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: var(--yx-input-wrapper-padding);
+    background-color: var(--yx-input-wrapper-background-color);
+    border-radius: var(--yx-input-wrapper-border-radius);
+    box-shadow: var(--yx-input-wrapper-box-shadow);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 350ms;
+}
+
+.yx-input__inner {
+    flex-grow: 1;
+    min-width: 0;
+    height: var(--yx-input-inner-height);
+    color: var(--yx-color-gray-light-3);
+    font-size: inherit;
+    line-height: var(--yx-input-inner-line-height);
+    outline: none;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+}
+
+.yx-input__inner:disabled {
+    cursor: not-allowed;
+}
+
+.yx-input__prepend, .yx-input__append {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: var(--yx-input-border-radius);
+    white-space: nowrap;
+}
+
+.yx-input__prepend {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 1px 0 0 0 var(--yx-color-gray-light-7) inset,
+        0 1px 0 0 var(--yx-color-gray-light-7) inset,
+        0 -1px 0 0 var(--yx-color-gray-light-7) inset;
+}
+
+.yx-input__append {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: -1px 0 0 0 var(--yx-color-gray-light-7) inset,
+        0 1px 0 0 var(--yx-color-gray-light-7) inset,
+        0 -1px 0 0 var(--yx-color-gray-light-7) inset;
+}
+
+.yx-input__prefix, .yx-input__suffix {
+    display: inline-flex;
+    height: 100%;
+    color: var(--yx-color-gray-light-1);
+    white-space: nowrap;
+}
+
+.yx-input__prefix {
+    margin-right: 8px;;
+}
+
+.yx-input__suffix {
+    margin-left: 8px;
+}
+
+.yx-input__prefix-inner, .yx-input__suffix-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yx-input__icon {
+    width: var(--yx-input-icon-width);
+    height: var(--yx-input-icon-height);
+}
+
+.yx-input__clearable {
+    cursor: pointer;
+}
